@@ -1,14 +1,37 @@
 <html>
 <head>
-        <title>我的隨身秘書</title>
+    <title>我的隨身秘書</title>
+  <style>
+    .main{
+      background: rgba(255,255,255,0.5);
+    }
+  
+  </style>
 </head>
-<body background=/static/guility.jpg> 
+<body background=/static/naruto.jpg> 
+  <div class="main">
     <div>
+      <div class="topic">
         <p align="center"><font color=white size=+30>狗狗的日記：</font></p>
-        <a href="/diary">瀏覽日誌</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/diary/add">給我多點日誌</a>
+      </div>
+      <div class="subtitle">     
+        <p align="center">
+          <a href="/diary">瀏覽日誌</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/diary/add">給我多點日誌</a>
+        </p>
+      </div>
     </div>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+              <font align="center" style="background-color:white">
+               {% block content %}
+               {% endblock %}
+              </font>
+          </div>
+        </div>
+    </div>
+  </div>
        
-        {% block content %}
-        {% endblock %}
+       
 </body>
 </html>
